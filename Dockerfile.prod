@@ -17,8 +17,8 @@ RUN apk update && apk add python3 python3-dev mariadb-dev build-base && pip3 ins
 
 
 # install libmysqlclient-dev
-RUN apk add mariadb-connector-c-dev
-
+# RUN apk add mariadb-connector-c-dev
+RUN apt install default-libmysqlclient-dev pkg-config -y
 
 # install dependencies
 COPY ./requirements.txt .
